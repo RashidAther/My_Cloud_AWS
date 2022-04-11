@@ -16,14 +16,24 @@ EBS volumes
 > Chek if there is any data on volume
 # file -s /dev/xvdf
 
-> Create a file system for volume
+> Create a file system for volume and format it
 # mkfs -t ext4 /dev/xvdf
 
-# mkdir /fileserver
+> Chek again if there is any data on volume and mounted on ext4
+# file -s /dev/xvdf
+
+# mkdir </fileserver>
  
-# mount /dev/xvdf /fileserver
+# mount /dev/xvdf </fileserver>
 
 # cd /fileserver
+
+ll > check the lost+found(freshly formatted)
+
+> To remove the lost+found
+sudo rm -rf /lost+found
+
+ll > lost+found gone
 
 > Create some files using nano
 
